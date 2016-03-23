@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--To link Javascript to HTML doc-->
+      <script type="text/javascript" src="jquery.js"></script>
+      <!--BootStrap CDN-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <!--BootStrap Javascript-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <!--FontAwesome CDN-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!--My Custom CSS. This needs to go after, so it isn't overriden-->
+      <link type="text/css" rel="stylesheet" href="challenge7CodingHouse.css"/>
+    </head>
+    <body>
+      <!--"container-fluid" provides a full width container to hold the navbar. "containerStyle" is my CSS-->
+      <nav class="navbar navbar-default navbarStyle">
+        <div class="container-fluid containerStyle">
+          <!--This first button is for the Home icon-->
+          <div class="btn-group">
+            <!--"data-toggle" is a data attribute that "hooks up the element to the type of widget it is," and it can equal modal, collapse, tab, dropdown. "Data-target" accepts a selector to apply, I believe, the data-toggle to. If, by default, the collapsible element is closed, set "aria-expanded" to false, and true otherwise.--> 
+            <button type="button" class="dropdownStyle btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              <!--This first item is the Font Awesome Home Icon-->
+              <i class="fa fa-home"></i>
+            </button>
+          </div>
+          <!--The next is for the Community button, which will be a dropdown-->
+          <div class="btn-group">
+            <button type="button" class="buttonDropdownAffect dropdownStyle btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              Community
+            </button>
+            <!--The following is for the dropdown menu-->
+            <ul class="dropdown-menu">
+              <li><a href="#">Recent Activity</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Member Forum</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Member list</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Member Groups</a></li>
+            </ul>
+          </div>
+          <!--Next one is for Pet Help button-->
+          <div class="btn-group">
+            <button type="button" class="buttonDropdownAffect dropdownStyle btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              Pet Help
+            </button>
+            <!--Pet Help dropdown menu-->
+            <ul class="dropdown-menu">
+              <li><a href="#">Grooming</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Hygiene</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Diet</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Training</a></li>
+            </ul>
+          </div>
+          <!--This next one is for Pets for Sale-->
+          <div class="btn-group">
+            <button type="button" class="buttonDropdownAffect dropdownStyle btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              Pets for Sale
+            </button>
+            <!--Pet Help dropdown menu-->
+            <ul class="dropdown-menu">
+              <li><a href="#">Dogs</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Cats</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Dragons</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Lemurs</a></li>
+            </ul>
+          </div>
+          <!--This last one is for Pet Services-->
+          <div class="btn-group">
+            <button type="button" class="buttonDropdownAffect dropdownStyle btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              Pet Services
+            </button>
+            <!--Pet Services dropdown menu-->
+            <ul class="dropdown-menu">
+              <li><a href="#">Help: Lost Animal</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Help: Accidental Overdose</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Animal Companionship Service</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Dietitian</a></li>
+            </ul>
+          </div>
+        <!--Closing Div and Nav-->
+        </div>
+      </nav>
+      <!--The following is my jQuery code to configure the dropdown menus so that when they are clicked and actively open, the background-color is white.-->
+      <script>
+        $(document).ready(function () {
+          $("button").focus(function () {
+            $(this).css("background-color", "white")
+          });
+          $("button").focusout(function () {
+            $(this).css("background-color", "#4190dc")
+          });
+        });
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,34 @@
+
+.containerStyle {
+	background-color: #575757;
+	position: relative;
+	padding-top: 8px;
+
+}
+
+.navbarStyle {
+	background-color: white;
+}
+
+body {
+	background-color: #ececec;
+	font-family: "Comic Sans MS";
+}
+
+.dropdown-menu {
+	border: none;
+	border-radius: 0px;
+
+}
+
+.btn {
+	border: none;
+	padding-left: 10px;
+	
+}
+
+.dropdownStyle {
+	background-color: #4190dc ;
+	color: white;
+	font-weight: bold;
+}
